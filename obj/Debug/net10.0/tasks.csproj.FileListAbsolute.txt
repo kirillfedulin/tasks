@@ -1,0 +1,14 @@
+C:\Users\37255\Desktop\IT\7.3\tasks\obj\Debug\net10.0\tasks.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\37255\Desktop\IT\7.3\tasks\obj\Debug\net10.0\tasks.AssemblyInfoInputs.cache
+C:\Users\37255\Desktop\IT\7.3\tasks\obj\Debug\net10.0\tasks.AssemblyInfo.cs
+C:\Users\37255\Desktop\IT\7.3\tasks\obj\Debug\net10.0\tasks.csproj.CoreCompileInputs.cache
+C:\Users\37255\Desktop\IT\7.3\tasks\bin\Debug\net10.0\tasks.exe
+C:\Users\37255\Desktop\IT\7.3\tasks\bin\Debug\net10.0\tasks.deps.json
+C:\Users\37255\Desktop\IT\7.3\tasks\bin\Debug\net10.0\tasks.runtimeconfig.json
+C:\Users\37255\Desktop\IT\7.3\tasks\bin\Debug\net10.0\tasks.dll
+C:\Users\37255\Desktop\IT\7.3\tasks\bin\Debug\net10.0\tasks.pdb
+C:\Users\37255\Desktop\IT\7.3\tasks\obj\Debug\net10.0\tasks.dll
+C:\Users\37255\Desktop\IT\7.3\tasks\obj\Debug\net10.0\refint\tasks.dll
+C:\Users\37255\Desktop\IT\7.3\tasks\obj\Debug\net10.0\tasks.pdb
+C:\Users\37255\Desktop\IT\7.3\tasks\obj\Debug\net10.0\tasks.genruntimeconfig.cache
+C:\Users\37255\Desktop\IT\7.3\tasks\obj\Debug\net10.0\ref\tasks.dll
