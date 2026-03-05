@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Channels;
 using System.Threading.Tasks;
 
-namespace Naidis_csharp
+namespace Naidis
 {
     public class StartPage
     {
