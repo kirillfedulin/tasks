@@ -7,7 +7,7 @@ using System.Numerics;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace tasks.osa4
+namespace osa4
 {
     internal class Osa4_funktsioonid
     {
