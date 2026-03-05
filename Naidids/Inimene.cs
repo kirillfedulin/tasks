@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Naidis_IKTpv25
+namespace Naidis
 {
     internal class Inimene
     {
