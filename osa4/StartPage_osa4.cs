@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Numerics;
 using System.Text;
 
-namespace tasks.osa4
+namespace osa4
 {
     internal class StartPage_osa4
     {
