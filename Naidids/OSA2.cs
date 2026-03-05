@@ -6,7 +6,7 @@ using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Naidis_csharp
+namespace Naidis
 {
     internal class osa2
     {
