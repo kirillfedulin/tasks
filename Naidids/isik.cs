@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Naidis_csharp
+namespace Naidis
 {
     public class isik
     {
