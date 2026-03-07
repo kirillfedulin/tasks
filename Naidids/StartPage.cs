@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Channels;
 using System.Threading.Tasks;
 
-namespace Naidis
+namespace Naidids
 {
     public class StartPage
     {
