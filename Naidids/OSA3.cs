@@ -7,9 +7,9 @@ using System.Text;
 using System.Threading.Channels;
 using System.Threading.Tasks;
 
-namespace Naidis
+namespace Naidids
 {
-    internal class osa3
+    internal class OSA3
     {
         static Random rnd = new Random();
 
