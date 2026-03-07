@@ -6,9 +6,9 @@ using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Naidis
+namespace Naidids
 {
-    internal class osa2
+    internal class OSA2
     {
         public static string Juku(string nimi = "Juku")
         {
