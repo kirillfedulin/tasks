@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Text;
 
-namespace tasks.osa5
+namespace tasks.osa
 {
     public class Person
     {
