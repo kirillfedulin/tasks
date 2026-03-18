@@ -135,6 +135,17 @@ namespace tasks.osa
             new Toode() { Nimi = "Jogurt", Kalorid = 59 };
             new Toode() { Nimi = "Lõhe", Kalorid = 208 };
 
+            string path = @"....";
+            StreamReader tood = new StreamReader(path);
+            string laused = tood.ReadToEnd();
+            tood.Close();
+            Console.WriteLine(laused);
+
+            foreach (Toode t in toode)
+            {
+                Console.WriteLine(t);
+            }
+
         }
     }
 }
