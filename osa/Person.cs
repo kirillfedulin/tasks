@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Text;
+using System.Xml.Linq;
 
 namespace tasks.osa
 {
@@ -74,18 +75,67 @@ namespace tasks.osa
             foreach (int arv in loetelu)
                 Console.WriteLine(arv);
         }
-        public static void Osa4()
+        public static void LinkedList()
         {
             LinkedList<int> loetelu = new LinkedList<int>();
             loetelu.AddLast(5);
             loetelu.AddLast(3);
-            loetelu.AddFirst(0);
+            loetelu.AddFirst(1);
 
+            foreach (int arv in loetelu)
+                Console.WriteLine(arv);
+
+            loetelu.RemoveFirst();
+            loetelu.RemoveLast();
+            loetelu.AddLast(555);
+            foreach (int arv in loetelu)
+                Console.WriteLine(arv);
+            loetelu.Remove(555);
+            foreach (int arv in loetelu)
+                Console.WriteLine(arv);
             loetelu.AddBefore(loetelu.Find(555), 1);
             loetelu.AddAfter(loetelu.Find(555), 1);
-            
+            foreach (int arv in loetelu)
+                Console.WriteLine(arv);
 
-        }   
-    } 
+
+
+        }
+        public static void Dictionary()
+        {
+            Dictionary<int, string> riigid = new Dictionary<int, string>();
+            riigid.Add(1, "Hiina");
+            riigid.Add(2, "Eesti");
+            riigid.Add(3, "Itaalia");
+
+            foreach (var paar in riigid)
+                Console.WriteLine($"{paar.Key} - {paar.Value}");
+
+            string pealinn = riigid[2];
+            Console.WriteLine("pealinn");
+            riigid[2] = "Eestimaa";
+            riigid.Remove(3);
+
+            //Contains
+            bool eesti = riigid.ContainsKey(77);
+            Console.WriteLine(eesti);
+
+        }
+        public static void Kalorite_kalkulaator()
+        {
+            List<Toode> toode = new List<Toode>();
+            new Toode() { Nimi = "Õun", Kalorid = 52 };
+            new Toode() { Nimi = "Banaan", Kalorid = 89 };
+            new Toode() { Nimi = "Kanafilee", Kalorid = 165 };
+            new Toode() { Nimi = "Riis", Kalorid = 130 };
+            new Toode() { Nimi = "Muna", Kalorid = 155 };
+            new Toode() { Nimi = "Piim", Kalorid = 42 };
+            new Toode() { Nimi = "Leib", Kalorid = 265 };
+            new Toode() { Nimi = "Juust", Kalorid = 350 };
+            new Toode() { Nimi = "Jogurt", Kalorid = 59 };
+            new Toode() { Nimi = "Lõhe", Kalorid = 208 };
+
+        }
+    }
 }
 
