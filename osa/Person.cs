@@ -1,14 +1,14 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
-using System.Text;
-using System.Xml.Linq;
+using System.IO;
 
-namespace tasks.osa
+namespace Person
 {
     public class Person
     {
         public string Name { get; set; }
+
         public static void Person1()
         {
             ArrayList nimed = new ArrayList();
@@ -25,46 +25,47 @@ namespace tasks.osa
 
             Console.WriteLine("Mati indeks: " + nimed.IndexOf("Mati"));
             Console.WriteLine("Mari indeks: " + nimed.IndexOf("Mari"));
+
             nimed.Sort();
-            Console.WriteLine(nimed);
 
             foreach (string nimi in nimed)
             {
                 Console.WriteLine(nimi);
             }
-
-
-
-
         }
-        public static void Tuple()
+
+        public static void TupleExample()
         {
             Tuple<float, char> route = new Tuple<float, char>(2.5f, 'N');
             Console.WriteLine($"Vahemaa: {route.Item1}, Suund: {route.Item2}");
         }
-        public static void List()
+
+        public static void ListExample()
         {
             List<string> people = new List<string>() { "Kadi", "Mirje" };
 
             foreach (string p in people)
                 Console.WriteLine(p);
-            //kustutamine Lisa nimega objekti litsid
+
             people.Remove("Lisa");
-            //näitab, et Lisa nimega objekti listis et olundki, sest see oli erinev objekt, kuigi nime poolest sama
+
             foreach (string p in people)
                 Console.WriteLine(p);
+
             people.RemoveAt(0);
             people.Insert(0, "Kadi");
             people.Insert(1, "Mirje");
-            //sortimerimine
+
             people.Sort();
+
             foreach (string p in people)
                 Console.WriteLine(p);
-            //sortima nimed pikkus järgi
+
             people.Sort((a, b) => a.Length.CompareTo(b.Length));
+
             foreach (string p in people)
                 Console.WriteLine(p);
-            //BinarySearch
+
             people.BinarySearch("Kadi");
 
             LinkedList<int> loetelu = new LinkedList<int>();
@@ -75,7 +76,8 @@ namespace tasks.osa
             foreach (int arv in loetelu)
                 Console.WriteLine(arv);
         }
-        public static void LinkedList()
+
+        public static void LinkedListExample()
         {
             LinkedList<int> loetelu = new LinkedList<int>();
             loetelu.AddLast(5);
@@ -88,20 +90,24 @@ namespace tasks.osa
             loetelu.RemoveFirst();
             loetelu.RemoveLast();
             loetelu.AddLast(555);
+
             foreach (int arv in loetelu)
                 Console.WriteLine(arv);
+
             loetelu.Remove(555);
-            foreach (int arv in loetelu)
-                Console.WriteLine(arv);
-            loetelu.AddBefore(loetelu.Find(555), 1);
-            loetelu.AddAfter(loetelu.Find(555), 1);
+
             foreach (int arv in loetelu)
                 Console.WriteLine(arv);
 
-
-
+            var node = loetelu.Find(555);
+            if (node != null)
+            {
+                loetelu.AddBefore(node, 1);
+                loetelu.AddAfter(node, 1);
+            }
         }
-        public static void Dictionary()
+
+        public static void DictionaryExample()
         {
             Dictionary<int, string> riigid = new Dictionary<int, string>();
             riigid.Add(1, "Hiina");
@@ -112,41 +118,53 @@ namespace tasks.osa
                 Console.WriteLine($"{paar.Key} - {paar.Value}");
 
             string pealinn = riigid[2];
-            Console.WriteLine("pealinn");
+            Console.WriteLine(pealinn);
+
             riigid[2] = "Eestimaa";
             riigid.Remove(3);
 
-            //Contains
             bool eesti = riigid.ContainsKey(77);
             Console.WriteLine(eesti);
-
         }
+
         public static void Kalorite_kalkulaator()
         {
-            List<Toode> toode = new List<Toode>();
-            new Toode() { Nimi = "Õun", Kalorid = 52 };
-            new Toode() { Nimi = "Banaan", Kalorid = 89 };
-            new Toode() { Nimi = "Kanafilee", Kalorid = 165 };
-            new Toode() { Nimi = "Riis", Kalorid = 130 };
-            new Toode() { Nimi = "Muna", Kalorid = 155 };
-            new Toode() { Nimi = "Piim", Kalorid = 42 };
-            new Toode() { Nimi = "Leib", Kalorid = 265 };
-            new Toode() { Nimi = "Juust", Kalorid = 350 };
-            new Toode() { Nimi = "Jogurt", Kalorid = 59 };
-            new Toode() { Nimi = "Lõhe", Kalorid = 208 };
+            List<Toode> tooted = new List<Toode>()
+            {
+                new Toode() { Nimi = "Õun", Kalorid = 52 },
+                new Toode() { Nimi = "Banaan", Kalorid = 89 },
+                new Toode() { Nimi = "Kanafilee", Kalorid = 165 }
+            };
 
-            string path = @"....";
-            StreamReader tood = new StreamReader(path);
-            string laused = tood.ReadToEnd();
-            tood.Close();
-            Console.WriteLine(laused);
+            string path = "test.txt";
 
-            foreach (Toode t in toode)
+            if (File.Exists(path))
+            {
+                string text = File.ReadAllText(path);
+                Console.WriteLine(text);
+            }
+            else
+            {
+                Console.WriteLine("Faili ei leitud");
+            }
+
+            foreach (Toode t in tooted)
             {
                 Console.WriteLine(t);
             }
-
         }
     }
-}
 
+    public class Toode
+    {
+        public string Nimi { get; set; }
+        public int Kalorid { get; set; }
+
+        public override string ToString()
+        {
+            return $"{Nimi} - {Kalorid} kcal";
+        }
+
+
+    }
+}
